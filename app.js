@@ -4,6 +4,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+//Connecting to the database
+var mongo = require('mongodb');
+var monk = require('monk');
+var db = monk('localhost:27017/comicsCollection');
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
