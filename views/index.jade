@@ -2,4 +2,28 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Comics Database
+
+  #wrapper
+
+    //Comic list
+    h2 Comic List
+    #comicList
+      table
+        thead
+          th Book Number
+          th Book Title
+          th Series Title
+          th Issue #
+          th Release Date
+          th Format
+          th Signed
+          th Graded
+          th Author(s)
+          th Penciler(s)
+          th Inker(s)
+          th Cover Artist(s)
+          th Publisher(s)
+          th Additional Notes
+          th Delete?
+        tbody
