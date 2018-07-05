@@ -24,6 +24,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//Making the database visible to the router
+app.use(function(req,res,next){
+    req.db = db;
+    next();
+});
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
