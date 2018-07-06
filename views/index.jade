@@ -2,18 +2,68 @@ extends layout
 
 block content
   h1= title
-  p Comics Database
 
+  // Wrapper
   #wrapper
 
-    //Comic list
-    h2 Comic List
+    // USER INFO
+    #comicInfo
+      h2 All Comic Books
+      p
+        strong Book Number:
+        |  <span id='bookNumber'></span>
+        br
+        strong Book Title:
+        |  <span id='bookTitle'></span>
+        br
+        strong Series Title:
+        |  <span id='bookSeriesTitle'></span>
+        br
+        strong Issue #:
+        |  <span id='bookIssueNumber'></span>
+        br
+        strong Release Date:
+        |  <span id='bookReleaseDate'></span>
+        br
+        strong Format:
+        |  <span id='bookFormat'></span>
+        br
+        strong Signed:
+        |  <span id='bookSigned'></span>
+        br
+        strong Graded:
+        |  <span id='bookGraded'></span>
+        br
+        strong Author(s):
+        |  <span id='bookAuthors'></span>
+        br
+        strong Penciller(s):
+        |  <span id='bookPenciler'></span>
+        br
+        strong Inker(s):
+        |  <span id='bookInker'></span>
+        br
+        strong Cover Artist(s):
+        |  <span id='bookCoverArtist'></span>
+        br
+        strong Publisher(s):
+        |  <span id='bookPublisher'></span>
+        br
+        strong Additional Notes:
+        |  <span id='bookNotes'></span>
+    // /USER INFO
+
+    // USER LIST
+    h2 User List
     #comicList
       table
         thead
           th Book Number
           th Book Title
           th Series Title
-          th Issue #
+          th Format
           th Delete?
         tbody
+    // /USER LIST
+
+  // /WRAPPER
