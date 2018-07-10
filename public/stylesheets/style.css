@@ -1,6 +1,7 @@
 body {
   padding: 30px;
   font: 20px "Georgia", Helvetica, sans-serif;
+  background-image: url("../../images/avengers.jpg");
 }
 
 h2 {
