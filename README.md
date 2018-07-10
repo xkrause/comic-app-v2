@@ -1,7 +1,7 @@
 # comic-app-v2
 A newer version of my comic book application from previous repositories
 
-Note: I do not own any of the images, tey are all from a Google image search.
+Note: I do not own any of the images, they are all from a Google image search.
 
 Note: This project is a work in progress. It is not finished/styled yet, and all features have not been developed.
 
