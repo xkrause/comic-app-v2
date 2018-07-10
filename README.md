@@ -1,6 +1,8 @@
 # comic-app-v2
 A newer version of my comic book application from previous repositories
 
+Note: I do not own any of the images, tey are all from a Google image search.
+
 Note: This project is a work in progress. It is not finished/styled yet, and all features have not been developed.
 
 In order to get this up ad running, you'll need to have Node.js installed on your machine,
