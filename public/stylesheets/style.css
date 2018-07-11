@@ -28,6 +28,10 @@ a {
 	position: relative;
 }
 
+#addComic {
+    padding-left: 200px;
+}
+
 #comicHeading {
     padding-left: 200px;
 }
