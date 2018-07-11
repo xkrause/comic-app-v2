@@ -30,7 +30,7 @@ function populateTable() {
       tableContent += '<td>' + this.bookNum + '</td>';
       tableContent += '<td><a href = "#" class = "linkshowuser" rel = "' + this.bookTitle + '">' + this.bookTitle + '</a></td>';
       tableContent += '<td>' + this.seriesTitle + '</td>';
-      tableContent += '<td>' + this.issueNum + '</td>';
+      tableContent += '<td>' + this.format + '</td>';
       tableContent += '<td><a href="#" class="linkDeleteComic" rel="' + this._id + '">delete</a></td>';
       tableContent += '</tr>';
     });
