@@ -11,6 +11,9 @@ $('#comicList table tbody').on('click', 'td a.linkshowuser', showComicInfo);
 //Add comic book button
 $("#btnAddComic").on("click", addComic);
 
+//Delete comic book when the link is clicked in the table
+$('#comicList table tbody').on('click', 'td a.linkDeleteComic', deleteComic);
+
 function populateTable() {
 
   var tableContent = '';
@@ -28,7 +31,7 @@ function populateTable() {
       tableContent += '<td><a href = "#" class = "linkshowuser" rel = "' + this.bookTitle + '">' + this.bookTitle + '</a></td>';
       tableContent += '<td>' + this.seriesTitle + '</td>';
       tableContent += '<td>' + this.issueNum + '</td>';
-      tableContent += '<td><a href="#" class="linkdeleteuser" rel="' + this._id + '">delete</a></td>';
+      tableContent += '<td><a href="#" class="linkDeleteComic" rel="' + this._id + '">delete</a></td>';
       tableContent += '</tr>';
     });
 
@@ -126,6 +129,36 @@ function addComic(event) {
   else {
     //If the form fields aren't all filled out, then let the user know
     alert("All form fields must be filled in");
+    return false;
+  }
+};
+
+//Delete comic book
+function deleteComic(event) {
+
+  event.preventDefault();
+
+  //Confirm with the user before delete
+  var confirmation = confirm("Are you sure you want to delete this comic book?");
+    
+  if (confirmation === true) {
+
+    $.ajax({
+      type: 'DELETE',
+      url: '/users/deleteComic/' + $(this).attr('rel')
+    }).done(function( response ) {
+
+      if (response.msg === '') {
+        //Delete successful
+      } else {
+        alert('Error: ' + response.msg);
+      }
+
+      //Make sure the table is updated after the book is deleted
+      populateTable();
+    });
+  } else {
+    //Don't delete if the user changed their mind
     return false;
   }
 };
