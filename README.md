@@ -5,6 +5,8 @@ Note: I do not own any of the images, they are all from a Google image search.
 
 Note: This project is a work in progress. It is not finished/styled yet, and all features have not been developed.
 
+Known Issue: Border around Add Comic Book field. Fix in progress.
+
 In order to get this up ad running, you'll need to have Node.js installed on your machine,
 and have mongod and mongo both set up as environment variables.
 If you don't know how that works, here's a great tutorial on how to get it all set up: https://www.youtube.com/watch?v=1uFY60CESlM&t=714s
