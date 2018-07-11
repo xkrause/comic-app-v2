@@ -3,10 +3,10 @@ extends layout
 block content
   h1= title
 
-  // Wrapper
+  //Wrapper
   #wrapper
 
-    // USER INFO
+    //COMIC INFO
     #comicInfo
       h2 All Comic Books
       p
@@ -51,9 +51,9 @@ block content
         br
         strong Additional Notes:
         |  <span id='bookNotes'></span>
-    // /USER INFO
+    //END USER INFO
 
-    // COMIC LIST
+    //COMIC LIST
     #comicHeading
         h2 Comic List
     #comicList
@@ -65,6 +65,34 @@ block content
           th Format
           th Delete?
         tbody
-    // /USER LIST
+    //END USER LIST
+    
+    //ADD COMIC
+    h2 Add Comic
+    #addComic
+      fieldset
+        input#inputBookNum(type='text', placeholder = "Book Number")
+        input#inputBookTitle(type='text', placeholder = "Book Title")
+        br
+        input#inputSeriesTitle(type='text', placeholder = "Series Title")
+        input#inputIssueNum(type='text', placeholder = "Issue #")
+        br
+        input#inputReleaseDate(type='text', placeholder = "Release Date")
+        input#inputFormat(type='text', placeholder = "Format")
+        br
+        input#inputSigned(type='text', placeholder = "Signed")
+        input#inputGraded(type='text', placeholder = "Graded")
+        br
+        input#inputAuthors(type='text', placeholder = "Author(s)")
+        input#inputPenciler(type='text', placeholder = "Penciler(s)")
+        br
+        input#inputInker(type='text', placeholder = "Inker(s)")
+        input#inputCoverArtist(type='text', placeholder = "Cover Artist(s)")
+        br
+        input#inputPublisher(type='text', placeholder = "Publisher(s)")
+        input#inputNotes(type='text', placeholder = "Additional Notes")
+        br
+        button#btnAddComic Add Comic Book
+    //END ADD COMIC
 
-  // /WRAPPER
+  //END WRAPPER
