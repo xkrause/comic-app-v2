@@ -1,7 +1,7 @@
 body {
   padding: 30px;
   font: 20px "Georgia", Helvetica, sans-serif;
-  background-image: url("../../images/avengers.jpg");
+  background-image: url("../images/avengers.jpg");
 }
 
 h1 {
@@ -32,6 +32,21 @@ a {
     padding-left: 200px;
 }
 
+#addComic input {
+    font: 20px "Jua", Helvetica, sans-serif;
+}
+
+#btnAddComic {
+    font: 20px "Jua", Helvetica, sans-serif;
+    text-align: center;
+    cursor: pointer;
+    background-color: deepskyblue;
+    color: #4c2b62;
+    border: none;
+    display: inline-block;
+    padding: 18px 30px;
+}
+
 #comicHeading {
     padding-left: 200px;
 }
@@ -52,8 +67,8 @@ a {
 			text-align: center;
 		}
 		#comicList table tbody {
-			padding: 0;
-            margin: 0;
+			padding: 0px;
+            margin: 0px;
 			border-collapse: collapse;
 			border-spacing: 0px;
 		}
