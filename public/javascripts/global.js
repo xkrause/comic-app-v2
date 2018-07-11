@@ -8,6 +8,9 @@ $(document).ready(function() {
 //Link for the Book Title in the table
 $('#comicList table tbody').on('click', 'td a.linkshowuser', showComicInfo);
 
+//Add comic book button
+$("#btnAddComic").on("click", addComic);
+
 function populateTable() {
 
   var tableContent = '';
@@ -64,4 +67,65 @@ function showComicInfo(event) {
   $('#bookCoverArtist').text(thisBookObject.coverArtist);
   $('#bookPublisher').text(thisBookObject.publisher);
   $('#bookNotes').text(thisBookObject.notes);
+};
+
+//Add Comic logic
+function addComic(event) {
+  event.preventDefault();
+
+  //Form validation
+  var errors = 0;
+  $('#addComic input').each(function(index, val) {
+    if($(this).val() === '') { errorCount++; }
+  });
+
+  if(errors === 0) {
+
+    // If it is, compile all user info into one object
+    var newComic = {
+      "bookNum": $("#addComic fieldset input#inputBookNum").val(),
+      "bookTitle": $("#addComic fieldset input#inputBookTitle").val(),
+      "seriesTitle": $("#addComic fieldset input#inputSeriesTitle").val(),
+      "issueNum": $("#addComic fieldset input#inputIssueNum").val(),
+      "releaseDate": $("#addComic fieldset input#inputReleaseDate").val(),
+      "format": $("#addComic fieldset input#inputFormat").val(),
+      "signed": $("#addComic fieldset input#inputSigned").val(),
+      "graded": $("#addComic fieldset input#inputGraded").val(),
+      "authors": $("#addComic fieldset input#inputAuthors").val(),
+      "penciler": $("#addComic fieldset input#inputPenciler").val(),
+      "inker": $("#addComic fieldset input#inputInker").val(),
+      "coverArtist": $("#addComic fieldset input#inputCoverArtist").val(),
+      "publisher": $("#addComic fieldset input#inputPublisher").val(),
+      "notes": $("#addComic fieldset input#inputNotes").val()
+    }
+
+    //Using AJAX to POST to the database
+    $.ajax({
+      type: "POST",
+      data: newComic,
+      url: "/users/addComic",
+      dataType: "JSON"
+    }).done(function( response ) {
+
+      //If successful, then no response
+      if (response.msg === "") {
+
+        //Reset the form
+        $("#addComic fieldset input").val("");
+
+        //Have the table display the updated database info
+        populateTable();
+
+      } else {
+
+        //If it didn't go through, then send the error message
+        alert("Error: " + response.msg);
+      }
+    });
+  }
+  else {
+    //If the form fields aren't all filled out, then let the user know
+    alert("All form fields must be filled in");
+    return false;
+  }
 };

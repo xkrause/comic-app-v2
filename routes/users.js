@@ -10,4 +10,15 @@ router.get('/comicsCollection', function(req, res) {
   });
 });
 
+/* POST a comic to the database */
+router.post('/addComic', function(req, res) {
+  var db = req.db;
+  var collection = db.get('comicsCollection');
+  collection.insert(req.body, function(err, result){
+    res.send(
+      (err === null) ? { msg: '' } : { msg: err }
+    );
+  });
+});
+
 module.exports = router;
