@@ -13,6 +13,10 @@ After you've cloned the repo, make sure that express and express-generator are u
 npm update -g express
 npm update -g express-generator
 ```
+You'll also need a folder to store all your data, so in your C drive, add an empty folder called data. You can do this through the File Explorer, or through the Command Line.
+```
+mkdir data
+```
 Next, install the dependencies.
 ```
 npm install
