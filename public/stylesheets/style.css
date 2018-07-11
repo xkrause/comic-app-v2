@@ -11,8 +11,12 @@ h1 {
 }
 
 h2 {
-    color: aliceblue;
+    color: deepskyblue;
 	margin: 0 0 .9em 0;
+}
+
+.comicList {
+    padding-left: 50px;
 }
 
 a {
@@ -24,8 +28,13 @@ a {
 	position: relative;
 }
 
+#comicHeading {
+    padding-left: 200px;
+}
+
 #comicList {
 	margin: 0 0 45px 0;
+    padding-left: 200px;
 }
 	#comicList table {
 		border-collapse: separate;
@@ -52,7 +61,7 @@ a {
 			}
 
 #comicInfo {
-	width: 250px;
+	width: 400px;
 	position: absolute;
 	top: 0;
     left:20px;
