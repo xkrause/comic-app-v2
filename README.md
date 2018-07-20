@@ -3,6 +3,8 @@ A newer version of my comic book application from previous repositories
 
 Note: I do not own any of the images, they are all from a Google image search.
 
+Note: Updating a comic book is proving to be a more difficult process than I anticipated. I haven't made any commits lately since I'm trying to get the update functionality to work as expected. There are some styling and other minor changes that will be coming, but the update feature will take a bit longer.
+
 Note: This project is a work in progress. It is not finished/styled yet, and all features have not been developed.
 
 Known Issue: Border around Add Comic Book field. Fix in progress.
